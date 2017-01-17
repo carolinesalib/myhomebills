@@ -31,26 +31,13 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+			  	<% Subgroup.where(group: group).each do |subgroup| %>
 			    <tr>
-			      <td>1</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			      <td><%= subgroup.id %></td>
+			      <td><%= subgroup.name %></td>
+			      <td><%= 100 %></td>
 			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
+			    <% end %>
 			  </tbody>
 			</table>
 	  </div>
