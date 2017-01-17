@@ -35,7 +35,7 @@
 			    <tr>
 			      <td><%= subgroup.id %></td>
 			      <td><%= subgroup.name %></td>
-			      <td><%= 100 %></td>
+			      <td><%= Build.where(subgroup: subgroup).sum(:value) %></td>
 			    </tr>
 			    <% end %>
 			  </tbody>
