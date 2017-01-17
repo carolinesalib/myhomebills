@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :groups, only: [:index, :new, :create, :show, :edit]
+  resources :subgroups, only: [:new, :create]
 
 end
