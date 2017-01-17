@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due_date: 2017-01-17
+  value: 
+  subgroup: one
+
+two:
+  name: MyString
+  due_date: 2017-01-17
+  value: 
+  subgroup: two
