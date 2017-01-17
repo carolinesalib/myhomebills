@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :groups, only: [:index, :new, :create, :show, :edit]
-  resources :subgroups, only: [:new, :create]
+  resources :subgroups, only: [:new, :create, :show]
   resources :builds, only: [:new, :create]
 
 end

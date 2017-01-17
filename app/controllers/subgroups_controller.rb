@@ -16,6 +16,10 @@ class SubgroupsController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
   def resource_params
     params.require(:subgroup).permit(:name, :description, :group_id)
