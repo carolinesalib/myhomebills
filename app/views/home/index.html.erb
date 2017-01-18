@@ -30,14 +30,15 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<% Subgroup.where(group: group).each do |subgroup| %>
+			  	<% subgroups_of_group(group).each do |subgroup| %>
 			    <tr>
 			      <td><a href="#"><%= subgroup.name %></a></td>
-			      <td><%= Build.where(subgroup: subgroup).sum(:value) %></td>
+			      <td><%= total_build_of_subgroup subgroup %></td>
 			    </tr>
 			    <% end %>
 			  </tbody>
 			</table>
+			Total: <%= total_build_of_group group %>
 	  </div>
 	</div>
 	<% end %>
