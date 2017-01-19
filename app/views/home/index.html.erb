@@ -32,7 +32,7 @@
 			  <tbody>
 			  	<% subgroups_of_group(group).each do |subgroup| %>
 			    <tr>
-			      <td><a href="#"><%= subgroup.name %></a></td>
+			      <td><a href="<%=subgroup_path(subgroup.id)%>"><%= subgroup.name %></a></td>
 			      <td><%= total_build_of_subgroup subgroup %></td>
 			    </tr>
 			    <% end %>

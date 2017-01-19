@@ -1,0 +1,30 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="well bs-component">
+<div class="panel panel-default">
+  <div class="panel-body"><%= @subgroup.name %></div>
+  <div class="panel-footer">
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th> Build </th>
+          <th> Due Date </th>
+          <th> Value </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @builds.each do |build| %>
+        <tr>
+          <td><%= build.name %></td>
+          <td><%= build.due_date %></td>
+          <td><%= build.value %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    Total: <%= total_build_of_subgroup @subgroup %>
+  </div>
+</div>
+</div>
+</div>
+<div class="col-md-2"></div>
