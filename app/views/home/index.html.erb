@@ -30,15 +30,15 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<% subgroups_of_group(group).each do |subgroup| %>
+			  	<% group.subgroups.each do |subgroup| %>
 			    <tr>
 			      <td><a href="<%=subgroup_path(subgroup.id)%>"><%= subgroup.name %></a></td>
-			      <td><%= total_build_of_subgroup subgroup %></td>
+			      <td><%= subgroup.total_builds %></td>
 			    </tr>
 			    <% end %>
 			  </tbody>
 			</table>
-			Total: <%= total_build_of_group group %>
+			Total: <%= group.total_builds %>
 	  </div>
 	</div>
 	<% end %>
