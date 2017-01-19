@@ -1,5 +1,11 @@
 <div class="col-md-2"></div>
 <div class="col-md-8">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <a href="<%=new_build_path(subgroup: @subgroup)%>" class="btn btn-link">New build</a>
+  </div>
+</nav>
+
 <div class="well bs-component">
 <div class="panel panel-default">
   <div class="panel-body"><%= @subgroup.name %></div>

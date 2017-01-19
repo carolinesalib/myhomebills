@@ -3,15 +3,14 @@ class BuildsController < ApplicationController
 
   def new
   	@build = Build.new
-  	@groups = Group.where(user: current_user)
-  	@subgroups = Subgroup.where(group: @groups)
+    @subgroup = Subgroup.where(id: params[:subgroup])
   end
 
   def create
     @build = Build.new(resource_params)
 
     if @build.save
-      redirect_to root_path
+      redirect_to subgroup_path(@build.subgroup)
     else
       render :new
     end

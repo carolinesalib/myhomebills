@@ -18,6 +18,7 @@ class SubgroupsController < ApplicationController
 
   def show
     @subgroup = Subgroup.find(params[:id])
+    @group = @subgroup.group
     @builds = Build.where(subgroup: @subgroup)
   end
 
