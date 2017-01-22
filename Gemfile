@@ -33,6 +33,8 @@ gem 'sass-rails', '>= 3.2'
 gem 'bootswatch-rails'
 gem 'pg'
 gem 'devise'
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
+gem 'rails-i18n', '~> 5.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

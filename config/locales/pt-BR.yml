@@ -19,11 +19,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  home: "Home"
-  united_title: "MyHomeBills"
-  new_group: "New group"
-  new_subgroup: "New subgroup"
+"pt-BR":
+  home: "Início"
+  united_title: "MinhasDespesas"
+  new_group: "Novo grupo"
+  new_subgroup: "Novo subgrupo"
   total: "Total"
-  subgroup: "Subgroup"
-  value: "Value"
+  subgroup: "Subgrupo"
+  value: "Valor"
