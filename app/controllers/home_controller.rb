@@ -16,5 +16,8 @@ class HomeController < ApplicationController
   	if !@month
   		@month = Date.today.month
   	end
+
+		session[:current_year] = @year
+		session[:current_month] = @month
   end
 end

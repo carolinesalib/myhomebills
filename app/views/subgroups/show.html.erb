@@ -28,7 +28,7 @@
         <% end %>
       </tbody>
     </table>
-    <%=t('total')%>: <%= @subgroup.total_bills %>
+    <%=t('total')%>: <%= @subgroup.total_bills(@month, @year) %>
   </div>
 </div>
 </div>

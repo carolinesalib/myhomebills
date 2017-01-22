@@ -19,7 +19,11 @@ class SubgroupsController < ApplicationController
   def show
     @subgroup = Subgroup.find(params[:id])
     @group = @subgroup.group
+    @year = session[:current_year]
+    @month = session[:current_month]
     @bills = Bill.where(subgroup: @subgroup)
+                 .by_year(@year)
+                 .by_month(@month)
   end
 
   private

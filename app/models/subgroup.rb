@@ -4,6 +4,6 @@ class Subgroup < ApplicationRecord
   accepts_nested_attributes_for :group
 
   def total_bills(month, year)
-  	bills.where('extract(year from due_date) = ? AND extract(month from due_date) = ?', year, month).sum(:value)
+  	bills.by_month(month).by_year(year).sum(:value)
   end
 end
