@@ -35,3 +35,4 @@
   new_bill: "Nova despesa"
   bill: "Despesa"
   due_date: "Data de vencimento"
+  filter: "Filtrar"
