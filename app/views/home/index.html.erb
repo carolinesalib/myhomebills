@@ -32,12 +32,12 @@
 			  	<% group.subgroups.each do |subgroup| %>
 			    <tr>
 			      <td><a href="<%=subgroup_path(subgroup.id)%>"><%= subgroup.name %></a></td>
-			      <td><%= subgroup.total_builds %></td>
+			      <td><%= subgroup.total_bills %></td>
 			    </tr>
 			    <% end %>
 			  </tbody>
 			</table>
-			Total: <%= group.total_builds %>
+			Total: <%= group.total_bills %>
 	  </div>
 	</div>
 	<% end %>

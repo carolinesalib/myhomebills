@@ -1,9 +1,9 @@
 class Subgroup < ApplicationRecord
   belongs_to :group
-  has_many :builds
+  has_many :bills
   accepts_nested_attributes_for :group
 
-  def total_builds
-  	builds.sum(:value)
+  def total_bills
+  	bills.sum(:value)
   end
 end

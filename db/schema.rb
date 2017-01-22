@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 20170117194501) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "builds", force: :cascade do |t|
+  create_table "bills", force: :cascade do |t|
     t.string   "name"
     t.date     "due_date"
     t.decimal  "value"
     t.integer  "subgroup_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["subgroup_id"], name: "index_builds_on_subgroup_id", using: :btree
+    t.index ["subgroup_id"], name: "index_bills_on_subgroup_id", using: :btree
   end
 
   create_table "groups", force: :cascade do |t|
@@ -32,23 +32,6 @@ ActiveRecord::Schema.define(version: 20170117194501) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_groups_on_user_id", using: :btree
-  end
-
-  create_table "models", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_models_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "subgroups", force: :cascade do |t|
@@ -77,7 +60,7 @@ ActiveRecord::Schema.define(version: 20170117194501) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "builds", "subgroups"
+  add_foreign_key "bills", "subgroups"
   add_foreign_key "groups", "users"
   add_foreign_key "subgroups", "groups"
 end

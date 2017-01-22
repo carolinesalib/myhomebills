@@ -19,7 +19,7 @@ class SubgroupsController < ApplicationController
   def show
     @subgroup = Subgroup.find(params[:id])
     @group = @subgroup.group
-    @builds = Build.where(subgroup: @subgroup)
+    @bills = Bill.where(subgroup: @subgroup)
   end
 
   private

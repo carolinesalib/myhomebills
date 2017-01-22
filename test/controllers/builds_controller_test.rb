@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class BuildsControllerTest < ActionDispatch::IntegrationTest
+class BillsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get builds_new_url
+    get bills_new_url
     assert_response :success
   end
 
   test "should get create" do
-    get builds_create_url
+    get bills_create_url
     assert_response :success
   end
 
