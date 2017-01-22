@@ -3,35 +3,35 @@
 <div class="well bs-component">
 <%= form_for @bill, html: {class: "form-horizontal"} do |f| %>
   <fieldset>
-    <legend>New bill</legend>
+    <legend><%=t('new_bill')%></legend>
     <div class="form-group">
-      <label for="name" class="col-lg-2 control-label">Name</label>
+      <label for="name" class="col-lg-2 control-label"><%=t('name')%></label>
       <div class="col-lg-10">
         <%= f.text_field :name, class: "form-control" %>
       </div>
     </div>
     <div class="form-group">
-      <label for="subgroup_id" class="col-lg-2 control-label">SubGroup</label>
+      <label for="subgroup_id" class="col-lg-2 control-label"><%=t('subgroup')%></label>
       <div class="col-lg-10">
 		<%= f.collection_select(:subgroup_id, @subgroup, :id, :name, {},{class: "form-control"}) %>
       </div>
     </div>
     <div class="form-group">
-      <label for="due_date" class="col-lg-2 control-label">Due date</label>
+      <label for="due_date" class="col-lg-2 control-label"><%=t('due_date')%></label>
       <div class="col-lg-10">
         <%= f.date_field :due_date, class: "form-control" %>
       </div>
     </div>
     <div class="form-group">
-      <label for="value" class="col-lg-2 control-label">Value</label>
+      <label for="value" class="col-lg-2 control-label"><%=t('value')%></label>
       <div class="col-lg-10">
         <%= f.number_field :value, class: "form-control" %>
       </div>
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <%= link_to "Cancel", subgroup_path(@subgroup), class: "btn btn-default" %>
-        <%= f.submit "Save", class: "btn btn-primary" %>
+        <%= link_to t('cancel'), subgroup_path(@subgroup), class: "btn btn-default" %>
+        <%= f.submit t('save'), class: "btn btn-primary" %>
       </div>
     </div>
   </fieldset>
