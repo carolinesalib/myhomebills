@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :groups, only: [:index, :new, :create, :show, :edit]
   resources :subgroups, only: [:new, :create, :show]
-  resources :bills, only: [:new, :create]
+  resources :bills, only: [:new, :create, :destroy]
 
 end

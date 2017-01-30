@@ -36,3 +36,6 @@
   bill: "Despesa"
   due_date: "Data de vencimento"
   filter: "Filtrar"
+  helpers:
+    links:
+      confirm: "Você tem certeza?"
